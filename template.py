@@ -4,7 +4,7 @@ import logging
 
 logging.basicConfig(level = logging.INFO, format = '[%(asctime)s]: %(message)s:')
 
-project_name = "Chicken-Disease--classification--deep-learning-project"
+project_name = "cnnclassifier"
 
 list_of_files = [
     ".github/worflows/.gitkeep",

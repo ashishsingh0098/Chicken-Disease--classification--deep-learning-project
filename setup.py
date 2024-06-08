@@ -8,7 +8,7 @@ __version__ = "0.0.1"
 
 REPO_NAME = "Chicken-Disease--classification--deep-learning-project"
 AUTHOR_USER_NAME = "ashishsingh0098"
-SRC_REPO = "Chicken-Disease--classification--deep-learning-project"
+SRC_REPO = "cnnclassifier"
 AUTHOR_EMAIL = "ashishsingh217070@gmail.com"
 
 
