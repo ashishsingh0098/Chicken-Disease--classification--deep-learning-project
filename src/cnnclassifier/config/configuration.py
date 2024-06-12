@@ -1,10 +1,12 @@
 import os
+from pathlib import Path
 from cnnclassifier.constants import *
 from cnnclassifier.utils.common import read_yaml, create_directories
 from cnnclassifier.entity.config_entity import DataIngestionConfig
 from cnnclassifier.entity.config_entity import PrepareBaseModelConfig
 from cnnclassifier.entity.config_entity import PrepareCallbacksConfig
 from cnnclassifier.entity.config_entity import TrainingConfig
+from cnnclassifier.entity.config_entity import EvaluationConfig
 
 
 class ConfigurationManager:
@@ -92,4 +94,15 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+
+    def get_validation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            path_of_model=Path("/home/ashish/VScode files/Python files/projects/DL project/Chicken-Disease--classification--deep-learning-project/artifacts/training/model.h5"),
+            training_data=Path("/home/ashish/VScode files/Python files/projects/DL project/Chicken-Disease--classification--deep-learning-project/artifacts/data_ingestion/Chicken-fecal-images"),
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE
+        )
+        return eval_config
       
